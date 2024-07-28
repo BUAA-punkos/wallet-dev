@@ -1,0 +1,9 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/BUAA-punkos/wallet-client
+[submodule "relay"]
+	path = relay
+	url = https://github.com/BUAA-punkos/wallet-relay
+[submodule "w3modal"]
+	path = w3modal
+	url = https://github.com/BUAA-punkos/pwc-modal
