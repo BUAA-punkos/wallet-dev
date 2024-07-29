@@ -7,7 +7,7 @@ An dev resolution for wc based punkos wallet
 
 ```mermaid
 graph LR
-    [User Client] --> {Connection Relay} --> {DApp Endpoint}
+    [UserClient] --> {ConnectionRelay} --> {DAppEndpoint}
 ```
 
 ### Dependencies
