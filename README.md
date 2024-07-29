@@ -1,6 +1,8 @@
 # wallet-dev
 An dev resolution for wc based punkos wallet
 
+> 修改子模块代码后先提交子仓库代码，再提交总仓库代码
+
 ### Architecture
 
 ```mermaid
