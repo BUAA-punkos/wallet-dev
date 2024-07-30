@@ -85,3 +85,59 @@ cd w3modal && npm install
 
 
 ### License
+
+
+### 关于git多模块仓库
+
+在GitHub中，如果你想在一个仓库中通过文件夹链接到其他多个仓库，可以使用Git的子模块（submodules）。这允许你将一个Git仓库作为另一个Git仓库的子目录。
+
+这里是如何设置和使用Git子模块的步骤：
+
+### 1. 添加子模块
+在你的主仓库中，可以通过以下命令添加子模块：
+```bash
+git submodule add <仓库URL> <路径/文件夹名>
+```
+例如，如果你想将一个名为 `Library` 的仓库添加为子模块，存放在 `external/Lib` 文件夹中，你可以这样做：
+```bash
+git submodule add https://github.com/exampleuser/Library.git external/Lib
+```
+
+### 2. 初始化子模块
+添加子模块后，你需要初始化并更新子模块：
+```bash
+git submodule init
+git submodule update
+```
+
+### 3. 克隆带有子模块的仓库
+如果你克隆了一个包含子模块的仓库，你需要在克隆后拉取子模块内容：
+```bash
+git clone <仓库URL>
+cd <仓库名称>
+git submodule update --init --recursive
+```
+
+### 4. 更新子模块
+如果子模块的源仓库有更新，你需要在主仓库中更新子模块：
+```bash
+git submodule update --remote
+```
+
+### 5. 提交和推送更改
+当你对子模块或主仓库进行更改后，需要先在子模块中提交和推送更改，然后再在主仓库中提交和推送：
+```bash
+# 在子模块中
+cd external/Lib
+git add .
+git commit -m "Update submodule"
+git push
+
+# 回到主仓库
+cd ../..
+git add external/Lib
+git commit -m "Update submodule reference"
+git push
+```
+
+这样，你就可以在GitHub仓库中通过文件夹的形式链接到其他多个仓库，每个链接都指向各自独立的Git仓库。这种方法非常适合管理依赖库或组织大型项目中的各个组件。
