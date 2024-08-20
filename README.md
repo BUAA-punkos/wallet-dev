@@ -70,7 +70,8 @@ cd w3modal && npm install
 
 ### 4. Run Dapp web3modal
 
-- Build dist `npm run build:examples` in `./w3modal`
+- Build local module dist `npm rurn build` in  `./w3modal`
+- Build example dist `npm run build:examples` in `./w3modal` 
 - Copy `.env.example` and rename to `.env`,  get project id from [walletconnect clound](https://cloud.walletconnect.com/)
 - Run vue-html-ethers5 `cd examples/vue-html-ethers5 && npm run dev:example` 
 
@@ -82,6 +83,11 @@ cd w3modal && npm install
 
 - [ ] This is a todo item.
 - [x] This is done work item.
+- [ ] kadena私钥真实生成
+- [ ] btc签名调试
+- [ ] 私钥导入支持
+- [ ] 自选链地址生成
+- [ ] ui显示优化，设置界面优化
 
 
 ### License
