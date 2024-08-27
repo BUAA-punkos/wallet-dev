@@ -32,5 +32,19 @@
             "internalConsoleOptions": "neverOpen",
             "restart": true
         },
+        {
+            "name": "VueExampleDebugger",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/w3modal/examples/vue-ethers5",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "dev:example"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "restart": true
+        },
     ]
 }
